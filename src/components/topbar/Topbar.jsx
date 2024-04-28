@@ -6,11 +6,11 @@ export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="topbarCenter">Facebook</span>
+        <span className="logo">Facebook</span>
       </div>
       <div className="topbarCenter">
         <div className="searchbar">
-          <Search />
+          <Search className="searchIcon" />
           <input
             placeholder="Search for a friend, post or video"
             className="searchInput"
@@ -19,8 +19,8 @@ export default function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
-          <span className="topbarLink"></span>
-          <span className="topbarLink"></span>
+          <span className="topbarLink">Homepage</span>
+          <span className="topbarLink">Timeline</span>
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
@@ -36,7 +36,7 @@ export default function Topbar() {
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
-        <img src="../../assets/person/1.jpg" alt="" className="topbarImg" />
+        <img src="../../assets/person/1.jpeg" alt="" className="topbarImg" />
       </div>
     </div>
   );
