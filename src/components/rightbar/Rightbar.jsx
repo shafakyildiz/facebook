@@ -1,4 +1,5 @@
 import "./rightbar.css";
+import { Users } from "../../assets/dummyData";
 
 export default function Rightbar() {
   return (
