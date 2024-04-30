@@ -10,6 +10,8 @@ import {
   SlowMotionVideo,
 } from "@material-ui/icons";
 import "./sidebar.css";
+import { Users } from "../../assets/dummyData";
+import Friend from "../friend/Friend";
 
 export default function Sidebar() {
   return (
@@ -56,110 +58,9 @@ export default function Sidebar() {
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>{" "}
-          <li className="sidebarFriend">
-            <img
-              src="../../assets/person/2.jpeg"
-              alt=""
-              className="sidebarFriendImage"
-            />
-            <span className="sidebarFriendName">Jane Doe</span>
-          </li>
+          {Users.map((user) => {
+            return <Friend key={user.id} user={user} />;
+          })}
         </ul>
       </div>
     </div>
